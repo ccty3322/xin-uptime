@@ -21,10 +21,14 @@
   }
 
   function link(to, text, className) {
-    var node = el('a', className, text);
+    var node = el('a', className, className === 'link' ? '' : text);
     node.href = to || '#';
     node.target = '_blank';
     node.rel = 'noopener noreferrer';
+    if (className === 'link') {
+      node.title = text || '';
+      node.setAttribute('aria-label', text || '');
+    }
     return node;
   }
 
@@ -74,6 +78,16 @@
     return '' + date.getFullYear() + pad(date.getMonth() + 1) + pad(date.getDate());
   }
 
+  function dayStart(date) {
+    return new Date(date.getFullYear(), date.getMonth(), date.getDate()).getTime();
+  }
+
+  function overlapSeconds(startA, endA, startB, endB) {
+    var start = Math.max(startA, startB);
+    var end = Math.min(endA, endB);
+    return Math.max(0, Math.floor((end - start) / 1000));
+  }
+
   function apiKeys() {
     if (Array.isArray(config.ApiKeys)) return config.ApiKeys.filter(Boolean);
     if (typeof config.ApiKeys === 'string' && config.ApiKeys) return [config.ApiKeys];
@@ -112,8 +126,22 @@
   }
 
   function loadingSite() {
-    var site = el('div', 'site');
-    append(site, el('div', 'loading'));
+    var site = el('div', 'site site-loading');
+    var meta = append(site, el('div', 'meta'));
+    append(meta, el('span', 'name'));
+    append(meta, el('span', 'link'));
+    append(meta, el('span', 'status'));
+
+    var timeline = append(site, el('div', 'timeline'));
+    var days = Math.max(1, parseInt(config.CountDays, 10) || 60);
+    for (var index = 0; index < days; index += 1) {
+      append(timeline, el('i', 'none'));
+    }
+
+    var summary = append(site, el('div', 'summary'));
+    append(summary, el('span'));
+    append(summary, el('span'));
+    append(summary, el('span'));
     return site;
   }
 
@@ -137,12 +165,8 @@
       dates.push(addDays(today, -index));
     }
 
-    var ranges = dates.map(function (date) {
-      return unix(date) + '_' + unix(addDays(date, 1));
-    });
     var start = unix(dates[dates.length - 1]);
     var end = unix(addDays(dates[0], 1));
-    ranges.push(start + '_' + end);
 
     var body = new URLSearchParams({
       api_key: apikey,
@@ -151,13 +175,12 @@
       log_types: '1-2',
       logs_start_date: String(start),
       logs_end_date: String(end),
-      custom_uptime_ranges: ranges.join('-'),
     });
 
     var controller = new AbortController();
     var timer = setTimeout(function () {
       controller.abort();
-    }, 30000);
+    }, 60000);
 
     try {
       var response = await fetch('https://api.uptimerobot.com/v2/getMonitors', {
@@ -175,14 +198,20 @@
       }
 
       return (data.monitors || []).map(function (monitor) {
-        var uptimeRanges = String(monitor.custom_uptime_ranges || '').split('-');
-        var average = formatNumber(uptimeRanges.pop());
         var map = {};
         var daily = dates.map(function (date, index) {
+          var startMs = dayStart(date);
+          var endMs = dayStart(addDays(date, 1));
+          var monitorStartMs = (monitor.create_datetime || 0) * 1000;
+          var monitoredSeconds = overlapSeconds(startMs, endMs, Math.max(startMs, monitorStartMs), endMs);
+
           map[dateKey(date)] = index;
           return {
             date: date,
-            uptime: Number(formatNumber(uptimeRanges[index])),
+            startMs: startMs,
+            endMs: endMs,
+            monitoredSeconds: monitoredSeconds,
+            uptime: monitoredSeconds > 0 ? 100 : 0,
             down: { times: 0, duration: 0 },
           };
         });
@@ -190,14 +219,32 @@
         var total = { times: 0, duration: 0 };
         (Array.isArray(monitor.logs) ? monitor.logs : []).forEach(function (log) {
           if (log.type !== 1) return;
-          var key = dateKey(new Date(log.datetime * 1000));
-          var dailyIndex = map[key];
-          total.duration += log.duration || 0;
+          var outageStartMs = log.datetime * 1000;
+          var duration = log.duration || (monitor.status === 9 ? Math.max(0, end - log.datetime) : 0);
+          var outageEndMs = outageStartMs + duration * 1000;
+          var outageDurationInRange = 0;
+          var startedDay = map[dateKey(new Date(outageStartMs))];
+
+          daily.forEach(function (day) {
+            var overlap = overlapSeconds(outageStartMs, outageEndMs, day.startMs, day.endMs);
+            if (!overlap) return;
+            day.down.duration += overlap;
+            outageDurationInRange += overlap;
+          });
+
+          total.duration += outageDurationInRange;
           total.times += 1;
-          if (dailyIndex === undefined) return;
-          daily[dailyIndex].down.duration += log.duration || 0;
-          daily[dailyIndex].down.times += 1;
+          if (startedDay !== undefined) daily[startedDay].down.times += 1;
         });
+
+        var monitoredTotal = 0;
+        daily.forEach(function (day) {
+          monitoredTotal += day.monitoredSeconds;
+          if (day.monitoredSeconds > 0) {
+            day.uptime = Math.max(0, 100 - day.down.duration / day.monitoredSeconds * 100);
+          }
+        });
+        var average = monitoredTotal > 0 ? formatNumber(100 - total.duration / monitoredTotal * 100) : '0';
 
         var status = 'unknow';
         if (monitor.status === 2) status = 'ok';
@@ -268,7 +315,8 @@
       var nodes = monitors.length ? monitors.map(renderSite) : [messageSite('暂无监控项', 'UptimeRobot 没有返回监控数据')];
       placeholder.replaceWith.apply(placeholder, nodes);
     }).catch(function (error) {
-      placeholder.replaceWith(messageSite('加载失败', error.message || '请检查 ApiKeys 或网络连接'));
+      var message = error.name === 'AbortError' ? 'UptimeRobot 接口超过 60 秒没有响应' : (error.message || '请检查 ApiKeys 或网络连接');
+      placeholder.replaceWith(messageSite('加载失败', message));
     });
   }
 
