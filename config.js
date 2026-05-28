@@ -20,16 +20,16 @@ window.Config = {
   // [v2.0] 导航栏菜单
   Navi: [
     {
-      text: '主页',
-      url: 'https://uptime.zrfme.com/'
+      text: '自签证书',
+      url: 'https://ssl2008.xccdee.nyc.mn/'
     },
     {
       text: 'GitHub',
-      url: 'https://github.com/shaoyouvip/uptime/'
+      url: 'https://github.com/ccty3322/xin-uptime'
     },
     {
-      text: '博客',
-      url: 'https://blog.zrf.me/'
+      text: '域名邮箱',
+      url: 'https://mail.xccdee.nyc.mn/sent/'
     },
   ],
 
