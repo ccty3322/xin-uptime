@@ -72,7 +72,7 @@ window.Config = {
       url: 'https://github.com/ccty3322/xin-uptime'
     },
     {
-      text: '域名邮箱',
+      text: '邮箱',
       url: 'https://mail.xccdee.nyc.mn/sent/'
     },
   ],
