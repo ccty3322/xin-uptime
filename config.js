@@ -20,6 +20,10 @@ window.Config = {
   // [v2.0] 导航栏菜单
   Navi: [
     {
+      text: '图仓',
+      url: 'https://tuchang.t999.qzz.io/login/'
+    },
+    {
       text: 'dedyn域名',
       url: 'https://desec.io/domains'
     },
