@@ -20,6 +20,10 @@ window.Config = {
   // [v2.0] 导航栏菜单
   Navi: [
     {
+      text: '印度uptime',
+      url: 'https://dona-w225ej9m1p.dcdeploy.cloud/'
+    },
+    {
       text: 'idx',
       url: 'https://idx.google.com/'
     },
