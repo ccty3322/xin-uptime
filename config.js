@@ -20,6 +20,10 @@ window.Config = {
   // [v2.0] 导航栏菜单
   Navi: [
     {
+      text: 'dedyn域名',
+      url: 'https://desec.io/domains'
+    },
+    {
       text: '导航',
       url: 'https://daohang.xf.ddns-ip.net/'
     },
