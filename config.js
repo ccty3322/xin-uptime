@@ -20,6 +20,10 @@ window.Config = {
   // [v2.0] 导航栏菜单
   Navi: [
     {
+      text: 'servoo-uptime',
+      url: 'http://xlkkcccc.fsghhh.serv00.net:35142/'
+    },
+    {
       text: 'ip查询',
       url: 'https://ping0.cc/'
     },
