@@ -20,6 +20,10 @@ window.Config = {
   // [v2.0] 导航栏菜单
   Navi: [
     {
+      text: 'idx',
+      url: 'https://idx.google.com/'
+    },
+    {
       text: 'ClouDNS域名',
       url: 'https://www.cloudns.net/'
     },
