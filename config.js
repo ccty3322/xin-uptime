@@ -20,6 +20,10 @@ window.Config = {
   // [v2.0] 导航栏菜单
   Navi: [
     {
+      text: 'CF',
+      url: 'https://dash.cloudflare.com'
+    },
+    {
       text: '哪吒',
       url: 'https://nazha.xccssaa.dpdns.org/'
     },
