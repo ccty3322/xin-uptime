@@ -20,6 +20,10 @@ window.Config = {
   // [v2.0] 导航栏菜单
   Navi: [
     {
+      text: '混淆',
+      url: 'https://toolonline.net/js-obfuscator/'
+    },
+    {
       text: 'uptime',
       url: 'http://xlkkcccc.fsghhh.serv00.net:35142/'
     },
