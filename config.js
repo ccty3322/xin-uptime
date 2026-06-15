@@ -20,7 +20,7 @@ window.Config = {
   // [v2.0] 导航栏菜单
   Navi: [
     {
-      text: 'servoo-uptime',
+      text: 'uptime',
       url: 'http://xlkkcccc.fsghhh.serv00.net:35142/'
     },
     {
