@@ -20,6 +20,10 @@ window.Config = {
   // [v2.0] 导航栏菜单
   Navi: [
     {
+      text: '哪吒',
+      url: 'https://nazha.xccssaa.dpdns.org/'
+    },
+    {
       text: '混淆',
       url: 'https://toolonline.net/js-obfuscator/'
     },
