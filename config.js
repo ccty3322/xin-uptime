@@ -20,6 +20,10 @@ window.Config = {
   // [v2.0] 导航栏菜单
   Navi: [
     {
+      text: 'ClouDNS域名',
+      url: 'https://www.cloudns.net/'
+    },
+    {
       text: '法国vps',
       url: 'https://admin.alwaysdata.com/'
     },
