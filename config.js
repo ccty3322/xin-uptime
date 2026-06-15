@@ -20,6 +20,10 @@ window.Config = {
   // [v2.0] 导航栏菜单
   Navi: [
     {
+      text: '法国vps',
+      url: 'https://admin.alwaysdata.com/'
+    },
+    {
       text: '图仓',
       url: 'https://tuchang.t999.qzz.io/login/'
     },
