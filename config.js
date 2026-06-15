@@ -20,7 +20,7 @@ window.Config = {
   // [v2.0] 导航栏菜单
   Navi: [
     {
-      text: '印度uptime',
+      text: '印度up',
       url: 'https://dona-w225ej9m1p.dcdeploy.cloud/'
     },
     {
@@ -28,7 +28,7 @@ window.Config = {
       url: 'https://idx.google.com/'
     },
     {
-      text: 'ClouDNS域名',
+      text: 'ClouDNS',
       url: 'https://www.cloudns.net/'
     },
     {
@@ -40,7 +40,7 @@ window.Config = {
       url: 'https://tuchang.t999.qzz.io/login/'
     },
     {
-      text: 'dedyn域名',
+      text: 'dedyn',
       url: 'https://desec.io/domains'
     },
     {
