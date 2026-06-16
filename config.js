@@ -28,8 +28,8 @@ window.Config = {
       url: 'https://idx.google.com/'
     },
     {
-      text: 'ClouDNS',
-      url: 'https://www.cloudns.net/'
+      text: 'freem',
+      url: 'https://new.freemchost.com/app/servers/'
     },
     {
       text: '法国vps',
