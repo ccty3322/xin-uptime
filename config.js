@@ -2,7 +2,6 @@ window.Config = {
 
   // [v2.0] 显示标题
   SiteName: 'UpTime',
-  
 
   // [v2.0] UptimeRobot Api Keys
   // 支持 Monitor-Specific 和 Read-Only
