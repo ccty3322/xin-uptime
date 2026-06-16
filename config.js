@@ -44,8 +44,8 @@ window.Config = {
       url: 'https://tuchang.t999.qzz.io/login/'
     },
     {
-      text: 'dedyn',
-      url: 'https://desec.io/domains'
+      text: 'MySQL',
+      url: 'https://console.aiven.io/account/a5befcce8e56/project/cnn-270d/services/mysql-xlkkssss/overview'
     },
     {
       text: '导航',
