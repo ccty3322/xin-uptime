@@ -20,8 +20,8 @@ window.Config = {
   // [v2.0] 导航栏菜单
   Navi: [
     {
-      text: 'X⁻up',
-      url: 'https://griselda-cdlwydcwjv.dcdeploy.cloud'
+      text: 'B⁻up',
+      url: 'https://3ds.ssssss.indevs.in/'
     },
     {
       text: '印度up',
