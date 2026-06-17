@@ -21,7 +21,7 @@ window.Config = {
   Navi: [
     {
       text: 'X⁻up',
-      url: 'https://up2026-g76ot9yy2n.dcdeploy.cloud'
+      url: 'https://griselda-cdlwydcwjv.dcdeploy.cloud'
     },
     {
       text: '印度up',
