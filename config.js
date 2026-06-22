@@ -68,7 +68,7 @@ window.Config = {
       url: 'https://toolonline.net/js-obfuscator/'
     },
     {
-      text: 'panel.bleemeo',
+      text: 'bleemeo',
       url: 'https://panel.bleemeo.com/monitor'
     },
     {
