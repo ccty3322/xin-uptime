@@ -68,8 +68,8 @@ window.Config = {
       url: 'https://toolonline.net/js-obfuscator/'
     },
     {
-      text: 'uptime',
-      url: 'http://xlkkcccc.fsghhh.serv00.net:35142/'
+      text: 'panel.bleemeo',
+      url: 'https://panel.bleemeo.com/monitor'
     },
     {
       text: 'ip查询',
