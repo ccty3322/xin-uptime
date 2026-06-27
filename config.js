@@ -44,7 +44,7 @@ window.Config = {
       url: 'https://admin.alwaysdata.com/'
     },
     {
-      text: 'R2图床',
+      text: 'R2⁻图床',
       url: 'https://tuchang.t999.qzz.io/login/'
     },
     {
@@ -68,11 +68,11 @@ window.Config = {
       url: 'https://toolonline.net/js-obfuscator/'
     },
     {
-      text: 'D1图床',
+      text: 'D1⁻图床',
       url: 'https://tc.kkkk.hidns.co/'
     },
     {
-      text: 'ip',
+      text: 'ip查询',
       url: 'https://ping0.cc/'
     },
     {
