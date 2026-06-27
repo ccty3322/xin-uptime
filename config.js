@@ -24,11 +24,11 @@ window.Config = {
       url: 'http://hxhdhdhe.ct8.pl:31286/setup-database/'
     },
     {
-      text: 'B⁻up',
+      text: '高配',
       url: 'https://3ds.ssssss.indevs.in/'
     },
     {
-      text: '印度up',
+      text: 'Uptime',
       url: 'https://dona-w225ej9m1p.dcdeploy.cloud/'
     },
     {
