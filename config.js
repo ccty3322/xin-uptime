@@ -44,7 +44,7 @@ window.Config = {
       url: 'https://admin.alwaysdata.com/'
     },
     {
-      text: 'R2⁻图床',
+      text: 'R2⁻telegraph',
       url: 'https://tuchang.t999.qzz.io/login/'
     },
     {
@@ -68,7 +68,7 @@ window.Config = {
       url: 'https://toolonline.net/js-obfuscator/'
     },
     {
-      text: 'D1⁻图床',
+      text: 'D1⁻telegraph',
       url: 'https://tc.kkkk.hidns.co/'
     },
     {
