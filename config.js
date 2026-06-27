@@ -44,7 +44,7 @@ window.Config = {
       url: 'https://admin.alwaysdata.com/'
     },
     {
-      text: '图床',
+      text: 'R2图床',
       url: 'https://tuchang.t999.qzz.io/login/'
     },
     {
