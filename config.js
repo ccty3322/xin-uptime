@@ -72,7 +72,7 @@ window.Config = {
       url: 'https://tc.kkkk.hidns.co/'
     },
     {
-      text: 'ip查询',
+      text: 'ip',
       url: 'https://ping0.cc/'
     },
     {
