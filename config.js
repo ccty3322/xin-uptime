@@ -73,7 +73,7 @@ window.Config = {
     },
     {
       text: 'ip查询',
-      url: 'https://ping0.cc/'
+      url: 'https://ipxc26-rh8jkixzzy.dcdeploy.cloud/'
     },
     {
       text: 'GitHub',
