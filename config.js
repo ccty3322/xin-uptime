@@ -73,7 +73,7 @@ window.Config = {
     },
     {
       text: 'ip查询',
-      url: 'https://ipxc26-rh8jkixzzy.dcdeploy.cloud/'
+      url: 'https://ip.net.coffee/'
     },
     {
       text: 'GitHub',
