@@ -53,7 +53,7 @@ window.Config = {
     },
     {
       text: '导航',
-      url: 'https://daohang.xf.ddns-ip.net/'
+      url: 'https://lwdh-dh8rni1wtp.dcdeploy.cloud/'
     },
     {
       text: 'CF',
