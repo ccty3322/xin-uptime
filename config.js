@@ -56,8 +56,8 @@ window.Config = {
       url: 'https://lwdh-dh8rni1wtp.dcdeploy.cloud/'
     },
     {
-      text: 'CF',
-      url: 'https://dash.cloudflare.com'
+      text: 'vercel',
+      url: 'https://vercel.com/login'
     },
     {
       text: '哪吒',
