@@ -32,8 +32,8 @@ window.Config = {
       url: 'https://dona-w225ej9m1p.dcdeploy.cloud/'
     },
     {
-      text: 'idx',
-      url: 'https://idx.google.com/'
+      text: 'Python混淆',
+      url: 'https://freecodingtools.org/tools/obfuscator/python'
     },
     {
       text: 'freem',
