@@ -73,7 +73,7 @@ window.Config = {
     },
     {
       text: 'ip查询',
-      url: 'https://ip.net.coffee/'
+      url: 'https://whoer.com/zh/'
     },
     {
       text: 'GitHub',
