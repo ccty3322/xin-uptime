@@ -20,8 +20,8 @@ window.Config = {
   // [v2.0] 导航栏菜单
   Navi: [
     {
-      text: 'CT8',
-      url: 'http://hxhdhdhe.ct8.pl:31286/setup-database/'
+      text: 'ipcx',
+      url: 'https://pingip.cn/'
     },
     {
       text: '高配',
