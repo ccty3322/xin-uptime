@@ -20,8 +20,8 @@ window.Config = {
   // [v2.0] 导航栏菜单
   Navi: [
     {
-      text: 'ipcx',
-      url: 'https://pingip.cn/'
+      text: 'lovable',
+      url: 'https://xlkkcccc.lovable.app/dashboard'
     },
     {
       text: '高配',
