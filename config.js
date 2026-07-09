@@ -68,7 +68,7 @@ window.Config = {
       url: 'https://toolonline.net/js-obfuscator/'
     },
     {
-      text: 'D1⁻telegraph',
+      text: 'D1⁻图床',
       url: 'https://tc.kkkk.hidns.co/'
     },
     {
