@@ -12,7 +12,7 @@ window.Config = {
 
   // [v2.0] 日志天数
   // 建议 60 或 90，显示效果比较好
-  CountDays: 90,
+  CountDays: 60,
 
   // [v2.0] 是否显示检测站点的链接
   ShowLink: true,
@@ -20,7 +20,7 @@ window.Config = {
   // [v2.0] 导航栏菜单
   Navi: [
     {
-      text: 'ble',
+      text: 'le',
       url: 'https://xlkkcccc.lovable.app/dashboard'
     },
     {
