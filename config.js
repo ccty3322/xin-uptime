@@ -20,7 +20,7 @@ window.Config = {
   // [v2.0] 导航栏菜单
   Navi: [
     {
-      text: 'lovable',
+      text: 'ble',
       url: 'https://xlkkcccc.lovable.app/dashboard'
     },
     {
