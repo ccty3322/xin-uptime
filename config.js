@@ -25,7 +25,7 @@ window.Config = {
     },
     {
       text: '高配',
-      url: 'https://griselda-cdlwydcwjv.dcdeploy.cloud/'
+      url: 'https://3ds.ssssss.indevs.in/'
     },
     {
       text: 'Uptime',
