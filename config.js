@@ -33,7 +33,7 @@ window.Config = {
     },
     {
       text: 'Python混淆',
-      url: 'https://freecodingtools.org/tools/obfuscator/python'
+      url: 'https://www.mzyco.com/?utm_source=chatgpt.com'
     },
     {
       text: 'freem',
