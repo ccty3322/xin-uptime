@@ -69,7 +69,7 @@ window.Config = {
     },
     {
       text: 'D1⁻图床',
-      url: 'https://tc.kkkk.hidns.co/'
+      url: 'https://tuchuan77.p6666.eu.cc/'
     },
     {
       text: 'ip查询',
