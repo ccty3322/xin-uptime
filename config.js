@@ -8,7 +8,7 @@ window.Config = {
   ApiKeys: [
     'ur2895179-3f53714943878fe8f96aabc2',
     'ur3267589-8f0b05c0ab405dece1d597f8',
-    'ur3717973-7ffa5411beab90037ac8b81c',
+    'ur3717973-b012ca6ca3369949312627d1',
   ],
 
   // [v2.0] 日志天数
